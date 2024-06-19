@@ -62,7 +62,7 @@ def cli():
 
     # n = Node.from_url("http://10.1.25.73:3000/?token=e3ba-4404-80d3")
     # t = n.create_task(arquivos_jpg, {"auto-boundary": True, "optimize-disk-space": True})
-    n = Node("http://10.1.25.73",3001)
+    n = Node("10.1.25.73", 3001)
     t = n.create_task(arquivos_jpg, 
                       options={"max-concurrency": 16, "remove-ortho-tiles": True, "camera-cloud": True},
                       name=task_name)

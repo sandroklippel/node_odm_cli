@@ -1,0 +1,1 @@
+{"auto-boundary": true, "optimize-disk-space": true, "orthophoto-png": true, "dsm": true, "dtm": true, "pc-quality": "high", "use-3dmesh": true, "rolling-shutter": true, "rolling-shutter-readout": 31, "max-concurrency": 16}

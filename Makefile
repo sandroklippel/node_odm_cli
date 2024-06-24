@@ -2,6 +2,7 @@ APP=nodeodmcli
 APP_DIR=dist
 BUILD_FILES=__main__.py
 BUILD_DIR=build
+INSTALL_DIR=/usr/local/bin
 
 app: $(BUILD_FILES)
 	mkdir -p $(APP_DIR)
@@ -12,3 +13,9 @@ app: $(BUILD_FILES)
 requirements: requirements.txt
 	mkdir -p $(BUILD_DIR)
 	python3 -m pip install -r requirements.txt --target $(BUILD_DIR)
+
+install: $(APP_DIR)/$(APP)
+	install -p "$(APP_DIR)/$(APP)" $(INSTALL_DIR)
+
+uninstall: $(INSTALL_DIR)/$(APP)
+	rm -f "$(INSTALL_DIR)/$(APP)"

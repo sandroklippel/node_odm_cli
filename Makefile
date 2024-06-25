@@ -14,7 +14,7 @@ requirements: requirements.txt
 	mkdir -p $(BUILD_DIR)
 	python3 -m pip install -r requirements.txt --target $(BUILD_DIR)
 
-install: $(APP_DIR)/$(APP)
+install: $(APP_DIR)/$(APP) uninstall
 	install -p "$(APP_DIR)/$(APP)" $(INSTALL_DIR)
 
 uninstall: $(INSTALL_DIR)/$(APP)
